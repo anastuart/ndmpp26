@@ -14,6 +14,7 @@ const NAV = [
       { id: 'reflections-of-meaning', title: 'Reflections of Meaning', path: 'stems/reflections-of-meaning.html' },
       { id: 'abc-framework',          title: 'ABC Framework',          path: 'stems/abc-framework.html' },
       { id: 'socratic-questioning',   title: 'Socratic Questioning',   path: 'stems/socratic-questioning.html' },
+      { id: 'verbal-risk-assessment', title: 'Verbal Risk Assessment', path: 'stems/verbal_risk_assessment.html' },
       // { id: 'mi-stems',            title: 'MI Question Stems',      path: 'stems/mi-stems.html' },
     ]
   },
