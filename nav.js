@@ -15,6 +15,11 @@ const NAV = [
       { id: 'abc-framework',          title: 'ABC Framework',          path: 'stems/abc-framework.html' },
       { id: 'socratic-questioning',   title: 'Socratic Questioning',   path: 'stems/socratic-questioning.html' },
       { id: 'verbal-risk-assessment', title: 'Verbal Risk Assessment', path: 'stems/verbal_risk_assessment.html' },
+      { id: 'metacognitive-therapy', title: 'Metacognitive Therapy',  path: 'stems/metacognitive-therapy.html' },
+      { id: 'vicious-flower',        title: 'Vicious Flower',         path: 'stems/vicious-flower.html' },
+      { id: 'clinical-assessment',   title: 'Clinical Assessment',    path: 'stems/clinical-assessment.html' },
+      { id: 'confrontation',         title: 'Confrontation',          path: 'stems/confrontation.html' },
+      { id: 'five-ps',               title: 'The 5 Ps',              path: 'stems/five-ps.html' },
       // { id: 'mi-stems',            title: 'MI Question Stems',      path: 'stems/mi-stems.html' },
     ]
   },
