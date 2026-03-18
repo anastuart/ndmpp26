@@ -18,6 +18,7 @@
   function buildNav() {
     sidebarNav.innerHTML = '';
     NAV.forEach(group => {
+      group.pages.sort((a, b) => a.title.localeCompare(b.title, undefined, { sensitivity: 'base' }));
       if (!group.pages.length) return;
       const sec = document.createElement('div');
       sec.className = 'nav-section';
