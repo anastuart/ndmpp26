@@ -120,7 +120,7 @@
       const saved = localStorage.getItem(key) || '';
 
       const wrapper = document.createElement('div');
-      wrapper.className = 'card-notes' + (saved ? ' has-content' : '');
+      wrapper.className = 'card-notes open' + (saved ? ' has-content' : '');
       wrapper.innerHTML = `
         <div class="card-notes-toggle">
           <span class="notes-chevron">▸</span>
