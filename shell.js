@@ -112,6 +112,39 @@
       }
     });
 
+    // Notes bar on category & letter cards
+    const pageId = window.location.hash.slice(1) || 'unknown';
+    contentScroll.querySelectorAll('.category-card, .letter-card').forEach((card, i) => {
+      if (card.querySelector('.card-notes')) return; // already injected
+      const key = `notes:${pageId}:${i}`;
+      const saved = localStorage.getItem(key) || '';
+
+      const wrapper = document.createElement('div');
+      wrapper.className = 'card-notes' + (saved ? ' has-content' : '');
+      wrapper.innerHTML = `
+        <div class="card-notes-toggle">
+          <span class="notes-chevron">▸</span>
+          <span>Notes</span>
+          <span class="notes-dot"></span>
+        </div>
+        <div class="card-notes-body">
+          <textarea placeholder="Add your notes here…">${saved.replace(/</g, '&lt;')}</textarea>
+        </div>`;
+
+      const toggle = wrapper.querySelector('.card-notes-toggle');
+      const textarea = wrapper.querySelector('textarea');
+
+      toggle.addEventListener('click', () => wrapper.classList.toggle('open'));
+
+      textarea.addEventListener('input', () => {
+        const val = textarea.value.trim();
+        localStorage.setItem(key, textarea.value);
+        wrapper.classList.toggle('has-content', val.length > 0);
+      });
+
+      card.appendChild(wrapper);
+    });
+
     // Filter buttons
     contentScroll.querySelectorAll('.filter-btn').forEach(btn => {
       btn.addEventListener('click', () => {
