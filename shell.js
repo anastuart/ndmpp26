@@ -209,6 +209,13 @@
   }
   if (overlay) overlay.addEventListener('click', closeMobile);
 
+  const sidebarCollapseBtn = document.getElementById('sidebarCollapseBtn');
+  if (sidebarCollapseBtn) {
+    sidebarCollapseBtn.addEventListener('click', () => {
+      sidebar.classList.add('collapsed');
+    });
+  }
+
   // ── Init ──
   buildNav();
   const hash = window.location.hash.slice(1);
