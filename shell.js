@@ -195,9 +195,18 @@
 
   if (searchInput) searchInput.addEventListener('input', applySearch);
 
-  // ── Mobile sidebar ──
+  // ── Sidebar toggle (desktop collapse + mobile slide) ──
   function closeMobile() { sidebar.classList.remove('open'); }
-  if (menuToggle) menuToggle.addEventListener('click', () => sidebar.classList.toggle('open'));
+  if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+      const isMobile = window.matchMedia('(max-width: 768px)').matches;
+      if (isMobile) {
+        sidebar.classList.toggle('open');
+      } else {
+        sidebar.classList.toggle('collapsed');
+      }
+    });
+  }
   if (overlay) overlay.addEventListener('click', closeMobile);
 
   // ── Init ──
