@@ -1,0 +1,100 @@
+<!-- ═══════════════════════════════════════════════════════
+     PAGE: Safety Plan Worksheet
+     Section: Worksheets & Resources
+
+     To edit: just change the HTML below.
+     ═══════════════════════════════════════════════════════ -->
+
+<style>
+  .ws-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; margin: 16px 0 0; }
+  .ws-field { display: flex; flex-direction: column; gap: 4px; }
+  .ws-field label { font-size: 11px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); }
+  .ws-field input {
+    border: none; border-bottom: 1.5px solid var(--border); background: transparent;
+    color: var(--ink); font-family: 'DM Sans', sans-serif; font-size: 14px;
+    padding: 6px 2px; outline: none; transition: border-color 0.2s; width: 100%;
+  }
+  .ws-field input:focus { border-bottom-color: var(--accent); }
+  .ws-field input::placeholder { color: var(--muted); }
+
+  .ws-section { background: var(--surface); border: 1.5px solid var(--border); border-radius: 16px; padding: 22px 24px; margin-bottom: 14px; }
+  .ws-section-title { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
+  .ws-section-desc { font-size: 13px; color: var(--muted); line-height: 1.55; margin-bottom: 4px; }
+  .ws-section-examples { font-size: 12px; color: var(--muted); font-style: italic; margin-bottom: 16px; line-height: 1.5; }
+  .ws-items { display: flex; flex-direction: column; gap: 10px; }
+  .ws-item { display: flex; align-items: center; gap: 12px; }
+  .ws-item-num { font-size: 12px; font-weight: 700; color: var(--muted); letter-spacing: 0.05em; min-width: 18px; text-align: right; flex-shrink: 0; }
+  .ws-item input {
+    flex: 1; border: none; border-bottom: 1.5px solid var(--border); background: transparent;
+    color: var(--ink); font-family: 'DM Sans', sans-serif; font-size: 14px;
+    padding: 5px 2px; outline: none; transition: border-color 0.2s;
+  }
+  .ws-item input:focus { border-bottom-color: var(--accent); }
+  .ws-item input::placeholder { color: var(--muted); opacity: 0.6; }
+
+  .ws-print-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--ink); color: var(--bg); border: none; border-radius: 8px;
+    padding: 9px 18px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500;
+    cursor: pointer; transition: opacity 0.15s; margin-top: 4px;
+  }
+  .ws-print-btn:hover { opacity: 0.8; }
+
+  @media print {
+    .ws-print-btn { display: none; }
+    .ws-field input, .ws-item input { border-bottom-color: #999; }
+  }
+</style>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="page-label">Client Worksheets</div>
+    <h1 class="page-title">Safety <em>Plan</em></h1>
+    <p class="page-desc">A personal guide to help clients stay safe when feeling overwhelmed or having thoughts of suicide — completed collaboratively with a clinician and/or support person.</p>
+  </div>
+</div>
+
+<div class="page-body">
+
+  <div class="info-card">
+    <div class="info-card-title">My Safety Plan Worksheet</div>
+    <p><em>To be completed together with a clinician and/or support person.</em></p>
+    <p>This safety plan is a personal guide to help me stay safe when I am feeling overwhelmed or having thoughts of suicide. I will keep this plan somewhere easy to access (phone, wallet, notebook).</p>
+    <div class="ws-fields">
+      <div class="ws-field"><label>Name</label><input type="text" placeholder="Client name" /></div>
+      <div class="ws-field"><label>Date</label><input type="text" placeholder="DD / MM / YYYY" /></div>
+      <div class="ws-field"><label>Support person (if applicable)</label><input type="text" placeholder="" /></div>
+      <div class="ws-field"><label>Clinician / Psychologist</label><input type="text" placeholder="" /></div>
+    </div>
+    <span class="note-tag">Stanley-Brown Safety Planning Intervention</span>
+  </div>
+
+  <!-- My Warning Signs -->
+  <div class="ws-section">
+    <div class="ws-section-title">My Warning Signs</div>
+    <div class="ws-section-desc">These are thoughts, feelings, behaviours, or situations that tell me I may be heading into a difficult period.</div>
+    <div class="ws-section-examples">Examples: feeling hopeless, withdrawing from others, trouble sleeping, intense anxiety, thinking "people would be better off without me."</div>
+    <div class="ws-items">
+      <div class="ws-item"><span class="ws-item-num">1.</span><input type="text" /></div>
+      <div class="ws-item"><span class="ws-item-num">2.</span><input type="text" /></div>
+      <div class="ws-item"><span class="ws-item-num">3.</span><input type="text" /></div>
+      <div class="ws-item"><span class="ws-item-num">4.</span><input type="text" /></div>
+    </div>
+  </div>
+
+  <!-- Things I Can Do On My Own -->
+  <div class="ws-section">
+    <div class="ws-section-title">Things I Can Do On My Own</div>
+    <div class="ws-section-desc">Activities that may help me calm down or get through the moment without needing to contact someone else.</div>
+    <div class="ws-section-examples">Examples: breathing exercises, listening to music, going for a walk, grounding exercises, journaling, watching a comforting show.</div>
+    <div class="ws-items">
+      <div class="ws-item"><span class="ws-item-num">1.</span><input type="text" /></div>
+      <div class="ws-item"><span class="ws-item-num">2.</span><input type="text" /></div>
+      <div class="ws-item"><span class="ws-item-num">3.</span><input type="text" /></div>
+      <div class="ws-item"><span class="ws-item-num">4.</span><input type="text" /></div>
+    </div>
+  </div>
+
+  <button class="ws-print-btn" onclick="window.print()">Print worksheet</button>
+
+</div>
