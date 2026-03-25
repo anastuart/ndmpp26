@@ -18,17 +18,46 @@
 <div class="filter-bar">
   <span class="filter-label">Filter:</span>
   <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="screener">SAK Screener</button>
   <button class="filter-btn" data-filter="thoughts">Suicidal Thoughts</button>
   <button class="filter-btn" data-filter="plan">Plan</button>
   <button class="filter-btn" data-filter="means">Means</button>
   <button class="filter-btn" data-filter="history">History</button>
   <button class="filter-btn" data-filter="screening">Screening Questions</button>
   <button class="filter-btn" data-filter="protective">Protective Factors</button>
+  <button class="filter-btn" data-filter="risk-level">Risk Classification</button>
   <button class="filter-btn" data-filter="management">Risk Management</button>
 </div>
 
 <div class="page-body">
 
+  <div class="info-card">
+    <div class="info-card-title">Verbal Risk Assessment</div>
+    <p>A verbal risk assessment gathers information across several domains — suicidal ideation, planning, access to means, previous behaviour, and protective factors — to estimate the client's level of risk and decide on a management plan. It is challenging to communicate with a client in distress, but gathering this information is essential. It is important to be persistent and compassionate throughout.</p>
+    <p>The assessment should lead to a risk classification (Low, Moderate, or High) and an appropriate response, developed collaboratively with the client where possible.</p>
+    <span class="note-tag">SAK Suicide Risk Screener · Clinical Risk Classification Framework</span>
+  </div>
+
+  <!-- SAK Screener -->
+  <div class="category-card" data-cats="screener">
+    <div class="cat-header"><div class="cat-dot" style="background:var(--accent5)"></div><div><div class="cat-title">SAK Suicide Risk Screener</div><div class="cat-desc">A structured sequence of questions to systematically assess suicide risk — begin by asking permission before proceeding</div></div></div>
+    <div class="stems-grid">
+      <div class="stem-item"><span class="stem-num">00</span><span class="stem-text"><em>Opening:</em> "I need to ask you a few questions on how you have been feeling — is that ok?"</span><button class="copy-btn">copy</button></div>
+      <div class="stem-item"><span class="stem-num">01</span><span class="stem-text">In the past 6 weeks, did you feel so sad that nothing could cheer you up?</span><button class="copy-btn">copy</button></div>
+      <div class="stem-item"><span class="stem-num">02</span><span class="stem-text">In the past 6 weeks, how often did you feel like a burden?</span><button class="copy-btn">copy</button></div>
+      <div class="stem-item"><span class="stem-num">03</span><span class="stem-text">In the past 6 weeks, how often did you feel intense shame or guilt?</span><button class="copy-btn">copy</button></div>
+      <div class="stem-item"><span class="stem-num">04</span><span class="stem-text">In the past 6 weeks, how often did you feel worthless?</span><button class="copy-btn">copy</button></div>
+      <div class="stem-item"><span class="stem-num">05</span><span class="stem-text">Have you ever thought about killing yourself? <em>→ If yes: How many times have you tried to kill yourself? When was the last attempt?</em></span><button class="copy-btn">copy</button></div>
+      <div class="stem-item"><span class="stem-num">06</span><span class="stem-text">Have you gone through any traumatic event recently? <em>(e.g. family breakdown, relationship problem, loss of loved one, child custody issues, unemployment, criminal punishments, financial or legal issues)</em></span><button class="copy-btn">copy</button></div>
+      <div class="stem-item"><span class="stem-num">07</span><span class="stem-text">Have things been so bad that you have thought about — or made — any plan for suicide? <em>→ If yes: How often do you have thoughts of suicide? How long have you been having these thoughts? How intense are they at their worst?</em></span><button class="copy-btn">copy</button></div>
+      <div class="stem-item"><span class="stem-num">08</span><span class="stem-text">Do you have a current plan for how you would attempt suicide? <em>→ If yes: What method? Where? Have preparations been made? How likely are you to act on this plan in the near future?</em></span><button class="copy-btn">copy</button></div>
+      <div class="stem-item"><span class="stem-num">09</span><span class="stem-text">What has stopped you from acting on these suicidal thoughts?</span><button class="copy-btn">copy</button></div>
+      <div class="stem-item"><span class="stem-num">10</span><span class="stem-text">Do you have any friends or family members you can confide in if you have a serious problem? <em>→ How often are you in contact with them? What has helped you through difficult times in the past?</em></span><button class="copy-btn">copy</button></div>
+    </div>
+    <div class="tag-row"><span class="tag">SAK</span><span class="tag">Structured Screener</span><span class="tag">Standardised</span></div>
+  </div>
+
+  <!-- Suicidal Thoughts -->
   <div class="category-card" data-cats="thoughts">
     <div class="cat-header"><div class="cat-dot" style="background:var(--accent)"></div><div><div class="cat-title">Suicidal Thoughts</div><div class="cat-desc">Exploring the presence, onset, persistence, and controllability of suicidal ideation.</div></div></div>
     <div class="stems-grid">
@@ -41,6 +70,7 @@
     <div class="tag-row"><span class="tag">Ideation</span><span class="tag">Onset</span><span class="tag">Control</span></div>
   </div>
 
+  <!-- Plan -->
   <div class="category-card" data-cats="plan">
     <div class="cat-header"><div class="cat-dot" style="background:var(--accent2)"></div><div><div class="cat-title">Presence of a Suicide Plan</div><div class="cat-desc">Assessing whether the client has a specific plan, including method and frequency of planning thoughts.</div></div></div>
     <div class="stems-grid">
@@ -51,6 +81,12 @@
     <div class="tag-row"><span class="tag">Plan</span><span class="tag">Method</span><span class="tag">Intent</span></div>
   </div>
 
+  <div class="dark-banner">
+    <div class="dark-banner-icon">!</div>
+    <p><strong>Plans or preparations for suicide indicate serious suicidal intent.</strong> This includes putting affairs in order, saying goodbyes, or giving away possessions. The presence of a specific, well-developed plan significantly elevates risk — escalate accordingly.</p>
+  </div>
+
+  <!-- Means -->
   <div class="category-card" data-cats="means">
     <div class="cat-header"><div class="cat-dot" style="background:var(--accent3)"></div><div><div class="cat-title">Access to Means</div><div class="cat-desc">Determining whether the client has the means available to carry out a plan, and how lethal those means are.</div></div></div>
     <div class="stems-grid">
@@ -61,6 +97,7 @@
     <div class="tag-row"><span class="tag">Means</span><span class="tag">Lethality</span><span class="tag">Access</span></div>
   </div>
 
+  <!-- History -->
   <div class="category-card" data-cats="history">
     <div class="cat-header"><div class="cat-dot" style="background:var(--accent4)"></div><div><div class="cat-title">Previous Suicidal Behaviour</div><div class="cat-desc">Exploring prior suicidal ideation, self-harm history, and parallels with the current situation.</div></div></div>
     <div class="stems-grid">
@@ -72,6 +109,7 @@
     <div class="tag-row"><span class="tag">History</span><span class="tag">Self-harm</span><span class="tag">Prior Attempts</span></div>
   </div>
 
+  <!-- Screening Question Hierarchy -->
   <div class="category-card" data-cats="screening">
     <div class="cat-header"><div class="cat-dot" style="background:var(--accent5)"></div><div><div class="cat-title">Screening Question Hierarchy</div><div class="cat-desc">A graduated sequence of questions that gently leads to directly asking about suicidal thoughts, feelings, plans, or behaviour.</div></div></div>
     <div class="stems-grid">
@@ -83,6 +121,7 @@
     <div class="tag-row"><span class="tag">Screening</span><span class="tag">Hierarchy</span><span class="tag">Direct Inquiry</span></div>
   </div>
 
+  <!-- Protective Factors -->
   <div class="category-card" data-cats="protective">
     <div class="cat-header"><div class="cat-dot" style="background:var(--accent6)"></div><div><div class="cat-title">Protective Factors</div><div class="cat-desc">Recognising and promoting factors that reduce suicide risk across personal, work, family, and community domains.</div></div></div>
     <div class="stems-grid">
@@ -98,8 +137,28 @@
     <div class="tag-row"><span class="tag">Protective Factors</span><span class="tag">Resilience</span><span class="tag">Safety</span></div>
   </div>
 
+  <!-- Risk Level Classification -->
+  <div class="category-card" data-cats="risk-level">
+    <div class="cat-header"><div class="cat-dot" style="background:var(--accent)"></div><div><div class="cat-title">Risk Level Classification</div><div class="cat-desc">Indicators and suggested clinical responses for Low, Moderate, and High risk presentations</div></div></div>
+    <div class="stems-grid">
+      <div class="stem-item"><span class="stem-num" style="color:var(--accent2)">LOW</span><span class="stem-text"><strong>Indicators:</strong> No plans or intent · No prior attempts · Few risk factors · Identifiable protective factors</span><button class="copy-btn">copy</button></div>
+      <div class="stem-item"><span class="stem-num" style="color:var(--accent2)">LOW</span><span class="stem-text"><strong>Response:</strong> Monitor and review risk frequently · Identify supports and provide contact details · Consult with a colleague or supervisor · Refer to safety plan and keep-safe strategies</span><button class="copy-btn">copy</button></div>
+      <div class="stem-item"><span class="stem-num" style="color:var(--accent4)">MOD</span><span class="stem-text"><strong>Indicators:</strong> Suicidal thoughts of limited frequency, intensity, and duration · No plans or intent · Some risk factors present · Some protective factors</span><button class="copy-btn">copy</button></div>
+      <div class="stem-item"><span class="stem-num" style="color:var(--accent4)">MOD</span><span class="stem-text"><strong>Response:</strong> Request permission to organise a specialised mental health assessment as soon as possible · Refer to safety plan · Consult with a colleague or supervisor · Remove means where possible · Review daily</span><button class="copy-btn">copy</button></div>
+      <div class="stem-item"><span class="stem-num" style="color:var(--accent)">HIGH</span><span class="stem-text"><strong>Indicators:</strong> Frequent, intense, enduring suicidal thoughts · Clear intent with specific, well-developed plans · Few or no alternatives considered · Many risk factors · Few or no protective factors <em>(or highly changeable presentation)</em></span><button class="copy-btn">copy</button></div>
+      <div class="stem-item"><span class="stem-num" style="color:var(--accent)">HIGH</span><span class="stem-text"><strong>Response:</strong> If immediate intention to act — contact mental health crisis team immediately and do not leave client alone · Remove means where possible · Call ambulance/police if client refuses assessment and crisis team is unavailable · Consult with a colleague or supervisor</span><button class="copy-btn">copy</button></div>
+    </div>
+    <div class="tag-row"><span class="tag">Low Risk</span><span class="tag">Moderate Risk</span><span class="tag">High Risk</span><span class="tag">Classification</span></div>
+  </div>
+
+  <div class="dark-banner">
+    <div class="dark-banner-icon">!</div>
+    <p><strong>Automatic High Risk:</strong> If a client presents as <strong>agitated, intoxicated, disoriented or confused, engaged in self-harm, delusional, or hallucinating</strong> — and is expressing thoughts of suicide — risk level is automatically <strong>HIGH</strong>, regardless of other indicators.</p>
+  </div>
+
+  <!-- Risk Management -->
   <div class="category-card" data-cats="management">
-    <div class="cat-header"><div class="cat-dot" style="background:var(--accent)"></div><div><div class="cat-title">Suicide Risk Management</div><div class="cat-desc">Steps to decide, in consultation with the client, how to manage risk and maintain safety following assessment.</div></div></div>
+    <div class="cat-header"><div class="cat-dot" style="background:var(--accent2)"></div><div><div class="cat-title">Suicide Risk Management</div><div class="cat-desc">Steps to decide, in consultation with the client, how to manage risk and maintain safety following assessment.</div></div></div>
     <div class="stems-grid">
       <div class="stem-item"><span class="stem-num">01</span><span class="stem-text">Develop a safety plan with the client.</span><button class="copy-btn">copy</button></div>
       <div class="stem-item"><span class="stem-num">02</span><span class="stem-text">Make referrals to other health professionals or services as appropriate.</span><button class="copy-btn">copy</button></div>
