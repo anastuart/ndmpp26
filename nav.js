@@ -20,6 +20,7 @@ const NAV = [
       { id: 'clinical-assessment',   title: 'Clinical Assessment',    path: 'stems/clinical-assessment.html' },
       { id: 'confrontation',         title: 'Confrontation',          path: 'stems/confrontation.html' },
       { id: 'five-ps',               title: 'The 5 Ps',              path: 'stems/five-ps.html' },
+      { id: 'formulation-discussion', title: 'Presenting a Formulation', path: 'stems/formulation-discussion.html' },
       // { id: 'mi-stems',            title: 'MI Question Stems',      path: 'stems/mi-stems.html' },
     ]
   },
