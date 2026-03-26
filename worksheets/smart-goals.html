@@ -1,0 +1,198 @@
+<!-- ═══════════════════════════════════════════════════════
+     PAGE: SMART Goals Worksheet
+     Section: Worksheets & Resources
+
+     To edit: just change the HTML below.
+     ═══════════════════════════════════════════════════════ -->
+
+<style>
+  .ws-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; margin: 16px 0 0; }
+  .ws-field { display: flex; flex-direction: column; gap: 4px; }
+  .ws-field label { font-size: 11px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); }
+  .ws-field input {
+    border: none; border-bottom: 1.5px solid var(--border); background: transparent;
+    color: var(--ink); font-family: 'DM Sans', sans-serif; font-size: 14px;
+    padding: 6px 2px; outline: none; transition: border-color 0.2s; width: 100%;
+  }
+  .ws-field input:focus { border-bottom-color: var(--accent); }
+  .ws-field input::placeholder { color: var(--muted); }
+
+  .ws-section { background: var(--surface); border: 1.5px solid var(--border); border-radius: 16px; padding: 22px 24px; margin-bottom: 14px; }
+  .ws-section-title { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
+  .ws-section-desc { font-size: 13px; color: var(--muted); line-height: 1.55; margin-bottom: 4px; }
+  .ws-section-examples { font-size: 12px; color: var(--muted); font-style: italic; margin-bottom: 16px; line-height: 1.5; }
+  .ws-items { display: flex; flex-direction: column; gap: 10px; }
+  .ws-item { display: flex; align-items: center; gap: 12px; }
+  .ws-item-num { font-size: 12px; font-weight: 700; color: var(--muted); letter-spacing: 0.05em; min-width: 18px; text-align: right; flex-shrink: 0; }
+  .ws-item input {
+    flex: 1; border: none; border-bottom: 1.5px solid var(--border); background: transparent;
+    color: var(--ink); font-family: 'DM Sans', sans-serif; font-size: 14px;
+    padding: 5px 2px; outline: none; transition: border-color 0.2s;
+  }
+  .ws-item input:focus { border-bottom-color: var(--accent); }
+  .ws-item input::placeholder { color: var(--muted); opacity: 0.6; }
+
+  .smart-letter {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0;
+    font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700;
+    margin-right: 4px;
+  }
+  .smart-header { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+
+  .smart-s .smart-letter { background: var(--accent); color: #fff; }
+  .smart-m .smart-letter { background: var(--accent2); color: #fff; }
+  .smart-a .smart-letter { background: var(--accent3); color: #fff; }
+  .smart-r .smart-letter { background: var(--accent4); color: #fff; }
+  .smart-t .smart-letter { background: var(--accent5); color: #fff; }
+
+  .ws-textarea {
+    width: 100%; border: 1.5px solid var(--border); border-radius: 10px; background: transparent;
+    color: var(--ink); font-family: 'DM Sans', sans-serif; font-size: 14px;
+    padding: 10px 12px; outline: none; resize: vertical; min-height: 70px;
+    transition: border-color 0.2s; margin-top: 12px; box-sizing: border-box;
+    line-height: 1.6;
+  }
+  .ws-textarea:focus { border-color: var(--accent); }
+  .ws-textarea::placeholder { color: var(--muted); opacity: 0.6; }
+
+  .ws-print-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--ink); color: var(--bg); border: none; border-radius: 8px;
+    padding: 9px 18px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500;
+    cursor: pointer; transition: opacity 0.15s; margin-top: 4px;
+  }
+  .ws-print-btn:hover { opacity: 0.8; }
+
+  @media print {
+    .ws-print-btn { display: none; }
+    .ws-field input, .ws-item input { border-bottom-color: #999; }
+    .ws-textarea { border-color: #999; }
+  }
+</style>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="page-label">Client Worksheets</div>
+    <h1 class="page-title">SMART <em>Goals</em></h1>
+    <p class="page-desc">A structured framework for collaboratively setting goals that are Specific, Measurable, Achievable, Relevant, and Time-bound.</p>
+  </div>
+</div>
+
+<div class="page-body">
+
+  <div class="info-card">
+    <div class="info-card-title">My SMART Goal Worksheet</div>
+    <p><em>To be completed together with a clinician.</em></p>
+    <p>Use this worksheet to turn a broad hope or intention into a clear, actionable goal. Work through each section with your clinician, then write your completed SMART goal at the bottom.</p>
+    <div class="ws-fields">
+      <div class="ws-field"><label>Name</label><input type="text" placeholder="Client name" /></div>
+      <div class="ws-field"><label>Date</label><input type="text" placeholder="DD / MM / YYYY" /></div>
+      <div class="ws-field"><label>Clinician / Psychologist</label><input type="text" placeholder="" /></div>
+      <div class="ws-field"><label>Goal area (e.g. health, work, relationships)</label><input type="text" placeholder="" /></div>
+    </div>
+  </div>
+
+  <!-- Broad goal -->
+  <div class="ws-section">
+    <div class="ws-section-title">Starting Point: What Do You Want?</div>
+    <div class="ws-section-desc">Before breaking it down, write out the broad goal or intention in your own words. Don't worry about being precise yet.</div>
+    <div class="ws-section-examples">Examples: "I want to feel less anxious", "I want to get fit", "I want to be more connected to people."</div>
+    <div class="ws-items">
+      <div class="ws-item"><input type="text" placeholder="Write your goal here…" /></div>
+    </div>
+  </div>
+
+  <!-- S — Specific -->
+  <div class="ws-section smart-s">
+    <div class="smart-header">
+      <span class="smart-letter">S</span>
+      <div class="ws-section-title" style="margin-bottom:0">Specific</div>
+    </div>
+    <div class="ws-section-desc">A specific goal clearly states what you want to achieve, who is involved, where it will happen, and why it matters.</div>
+    <div class="ws-section-examples">Ask: What exactly do I want to do? Who is involved? Where will this happen? Why is it important to me?</div>
+    <div class="ws-items">
+      <div class="ws-item"><span class="ws-item-num" style="min-width:fit-content; white-space:nowrap;">What exactly:</span><input type="text" /></div>
+      <div class="ws-item"><span class="ws-item-num" style="min-width:fit-content; white-space:nowrap;">Who/where:</span><input type="text" /></div>
+      <div class="ws-item"><span class="ws-item-num" style="min-width:fit-content; white-space:nowrap;">Why it matters:</span><input type="text" /></div>
+    </div>
+  </div>
+
+  <!-- M — Measurable -->
+  <div class="ws-section smart-m">
+    <div class="smart-header">
+      <span class="smart-letter">M</span>
+      <div class="ws-section-title" style="margin-bottom:0">Measurable</div>
+    </div>
+    <div class="ws-section-desc">A measurable goal has concrete criteria so you can track progress and know when you've succeeded.</div>
+    <div class="ws-section-examples">Ask: How will I know I've made progress? What does success look like? How much, how often, or how many?</div>
+    <div class="ws-items">
+      <div class="ws-item"><span class="ws-item-num" style="min-width:fit-content; white-space:nowrap;">How I'll track it:</span><input type="text" /></div>
+      <div class="ws-item"><span class="ws-item-num" style="min-width:fit-content; white-space:nowrap;">What success looks like:</span><input type="text" /></div>
+    </div>
+  </div>
+
+  <!-- A — Achievable -->
+  <div class="ws-section smart-a">
+    <div class="smart-header">
+      <span class="smart-letter">A</span>
+      <div class="ws-section-title" style="margin-bottom:0">Achievable</div>
+    </div>
+    <div class="ws-section-desc">An achievable goal is realistic given your current circumstances, skills, and resources — challenging but not overwhelming.</div>
+    <div class="ws-section-examples">Ask: Do I have (or can I get) the skills, time, and resources needed? What might get in the way? What's a realistic first step?</div>
+    <div class="ws-items">
+      <div class="ws-item"><span class="ws-item-num" style="min-width:fit-content; white-space:nowrap;">What I have:</span><input type="text" placeholder="skills, time, support…" /></div>
+      <div class="ws-item"><span class="ws-item-num" style="min-width:fit-content; white-space:nowrap;">Possible barriers:</span><input type="text" /></div>
+      <div class="ws-item"><span class="ws-item-num" style="min-width:fit-content; white-space:nowrap;">First step I could take:</span><input type="text" /></div>
+    </div>
+  </div>
+
+  <!-- R — Relevant -->
+  <div class="ws-section smart-r">
+    <div class="smart-header">
+      <span class="smart-letter">R</span>
+      <div class="ws-section-title" style="margin-bottom:0">Relevant</div>
+    </div>
+    <div class="ws-section-desc">A relevant goal matters to you and aligns with your values and broader life goals. It should feel meaningful, not just obligatory.</div>
+    <div class="ws-section-examples">Ask: Does this feel important to me right now? Does it connect to what I care about? Is this the right time?</div>
+    <div class="ws-items">
+      <div class="ws-item"><span class="ws-item-num" style="min-width:fit-content; white-space:nowrap;">Values it connects to:</span><input type="text" /></div>
+      <div class="ws-item"><span class="ws-item-num" style="min-width:fit-content; white-space:nowrap;">Why now:</span><input type="text" /></div>
+    </div>
+  </div>
+
+  <!-- T — Time-bound -->
+  <div class="ws-section smart-t">
+    <div class="smart-header">
+      <span class="smart-letter">T</span>
+      <div class="ws-section-title" style="margin-bottom:0">Time-bound</div>
+    </div>
+    <div class="ws-section-desc">A time-bound goal has a clear target date or timeframe, which creates urgency and helps with planning.</div>
+    <div class="ws-section-examples">Ask: When do I want to achieve this by? What can I do in the next week? What's my longer-term target date?</div>
+    <div class="ws-items">
+      <div class="ws-item"><span class="ws-item-num" style="min-width:fit-content; white-space:nowrap;">By this date:</span><input type="text" placeholder="DD / MM / YYYY" /></div>
+      <div class="ws-item"><span class="ws-item-num" style="min-width:fit-content; white-space:nowrap;">This week I'll:</span><input type="text" /></div>
+    </div>
+  </div>
+
+  <!-- Completed SMART goal -->
+  <div class="ws-section">
+    <div class="ws-section-title">My Completed SMART Goal</div>
+    <div class="ws-section-desc">Using your answers above, write your goal out as one clear statement that covers all five elements.</div>
+    <div class="ws-section-examples">Example: "I will go for a 20-minute walk three times a week before work, starting Monday, for the next four weeks — to help manage my anxiety and improve my mood."</div>
+    <textarea class="ws-textarea" placeholder="Write your SMART goal here…"></textarea>
+  </div>
+
+  <!-- Review -->
+  <div class="ws-section">
+    <div class="ws-section-title">Review & Check-in</div>
+    <div class="ws-section-desc">Schedule a time to review progress on this goal with your clinician.</div>
+    <div class="ws-items">
+      <div class="ws-item"><span class="ws-item-num" style="min-width:fit-content; white-space:nowrap;">Review date:</span><input type="text" placeholder="DD / MM / YYYY" /></div>
+      <div class="ws-item"><span class="ws-item-num" style="min-width:fit-content; white-space:nowrap;">Notes / adjustments:</span><input type="text" /></div>
+    </div>
+  </div>
+
+  <button class="ws-print-btn" onclick="window.print()">Print worksheet</button>
+
+</div>

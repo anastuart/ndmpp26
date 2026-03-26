@@ -35,6 +35,7 @@ const NAV = [
     section: 'Worksheets & Resources',
     pages: [
       { id: 'safety-plan',          title: 'Safety Plan',                path: 'worksheets/safety-plan.html' },
+      { id: 'smart-goals',          title: 'SMART Goals',                path: 'worksheets/smart-goals.html' },
       // { id: 'unhelpful-thinking', title: 'Unhelpful Thinking Styles', path: 'worksheets/unhelpful-thinking.html' },
       // { id: 'mi-change-plan',     title: 'MI Change Planning',        path: 'worksheets/mi-change-plan.html' },
     ]
