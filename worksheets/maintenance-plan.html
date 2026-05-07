@@ -1,0 +1,155 @@
+<!-- ═══════════════════════════════════════════════════════
+     PAGE: Mental Health Maintenance Plan
+     Section: Worksheets & Resources
+
+     A relapse-prevention worksheet to use during the
+     termination phase. Identifies triggers, warning signs,
+     self-care, coping strategies, and when to return to
+     therapy.
+     ═══════════════════════════════════════════════════════ -->
+
+<style>
+  .ws-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; margin: 16px 0 0; }
+  .ws-field { display: flex; flex-direction: column; gap: 4px; }
+  .ws-field label { font-size: 11px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); }
+  .ws-field input {
+    border: none; border-bottom: 1.5px solid var(--border); background: transparent;
+    color: var(--ink); font-family: 'DM Sans', sans-serif; font-size: 14px;
+    padding: 6px 2px; outline: none; transition: border-color 0.2s; width: 100%;
+  }
+  .ws-field input:focus { border-bottom-color: var(--accent); }
+  .ws-field input::placeholder { color: var(--muted); }
+
+  .ws-section { background: var(--surface); border: 1.5px solid var(--border); border-radius: 16px; padding: 22px 24px; margin-bottom: 14px; }
+  .ws-section-title { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
+  .ws-section-desc { font-size: 13px; color: var(--muted); line-height: 1.55; margin-bottom: 4px; }
+  .ws-section-examples { font-size: 12px; color: var(--muted); font-style: italic; margin-bottom: 16px; line-height: 1.5; }
+  .ws-items { display: flex; flex-direction: column; gap: 10px; }
+  .ws-item { display: flex; align-items: center; gap: 12px; }
+  .ws-item-num { font-size: 12px; font-weight: 700; color: var(--muted); letter-spacing: 0.05em; min-width: 18px; text-align: right; flex-shrink: 0; }
+  .ws-item input {
+    flex: 1; border: none; border-bottom: 1.5px solid var(--border); background: transparent;
+    color: var(--ink); font-family: 'DM Sans', sans-serif; font-size: 14px;
+    padding: 5px 2px; outline: none; transition: border-color 0.2s;
+  }
+  .ws-item input:focus { border-bottom-color: var(--accent); }
+  .ws-item input::placeholder { color: var(--muted); opacity: 0.6; }
+
+  .ws-textarea {
+    width: 100%; border: 1.5px solid var(--border); border-radius: 10px; background: transparent;
+    color: var(--ink); font-family: 'DM Sans', sans-serif; font-size: 14px;
+    padding: 10px 12px; outline: none; resize: vertical; min-height: 90px;
+    transition: border-color 0.2s; box-sizing: border-box;
+    line-height: 1.6;
+  }
+  .ws-textarea:focus { border-color: var(--accent); }
+  .ws-textarea::placeholder { color: var(--muted); opacity: 0.6; }
+
+  .ws-print-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--ink); color: var(--bg); border: none; border-radius: 8px;
+    padding: 9px 18px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500;
+    cursor: pointer; transition: opacity 0.15s; margin-top: 4px;
+  }
+  .ws-print-btn:hover { opacity: 0.8; }
+
+  @media print {
+    .ws-print-btn { display: none; }
+    .ws-field input, .ws-item input { border-bottom-color: #999; }
+    .ws-textarea { border-color: #999; }
+  }
+</style>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="page-label">Client Worksheets</div>
+    <h1 class="page-title">Mental Health <em>Maintenance Plan</em></h1>
+    <p class="page-desc">A relapse-prevention worksheet for the ending phase of therapy — identifying triggers, warning signs, self-care, coping strategies, and when to seek help again. Completed collaboratively with the clinician and kept somewhere accessible after termination.</p>
+  </div>
+</div>
+
+<div class="page-body">
+
+  <div class="info-card">
+    <div class="info-card-title">My Mental Health Maintenance Plan</div>
+    <p><em>To be completed together with a clinician during the termination phase.</em></p>
+    <p>Much like your body needs a balanced diet and exercise to stay well, your mental health needs ongoing attention. Maintaining wellness involves practising self-care, using coping strategies, and knowing when to seek help. This plan summarises what works for you and what to watch out for, so you can keep using what you've learned long after therapy ends.</p>
+    <div class="ws-fields">
+      <div class="ws-field"><label>Name</label><input type="text" placeholder="Client name" /></div>
+      <div class="ws-field"><label>Date</label><input type="text" placeholder="DD / MM / YYYY" /></div>
+      <div class="ws-field"><label>Clinician / Psychologist</label><input type="text" placeholder="" /></div>
+      <div class="ws-field"><label>Review date</label><input type="text" placeholder="DD / MM / YYYY" /></div>
+    </div>
+  </div>
+
+  <!-- Spotting Mental Health Risks -->
+  <div class="ws-section">
+    <div class="ws-section-title">Spotting Mental Health Risks — My Triggers</div>
+    <div class="ws-section-desc">A trigger is anything that can bring back mental health issues — activities, thoughts, people, places, or things. Once I know my triggers, I can avoid or manage them.</div>
+    <div class="ws-section-examples">Tip: Avoiding triggers may mean making changes to my habits, lifestyle, or relationships. List 4 of my triggers.</div>
+    <div class="ws-items">
+      <div class="ws-item"><span class="ws-item-num">1.</span><input type="text" /></div>
+      <div class="ws-item"><span class="ws-item-num">2.</span><input type="text" /></div>
+      <div class="ws-item"><span class="ws-item-num">3.</span><input type="text" /></div>
+      <div class="ws-item"><span class="ws-item-num">4.</span><input type="text" /></div>
+    </div>
+  </div>
+
+  <div class="ws-section">
+    <div class="ws-section-title">My Warning Signs</div>
+    <div class="ws-section-desc">Warning signs are symptoms — thoughts, feelings, or behaviours — that tell me my mental health might be at risk. Examples include sleep issues, social isolation, and stress.</div>
+    <div class="ws-section-examples">Tip: Knowing my warning signs lets me start managing symptoms before they become too severe. List 4 of my warning signs.</div>
+    <div class="ws-items">
+      <div class="ws-item"><span class="ws-item-num">1.</span><input type="text" /></div>
+      <div class="ws-item"><span class="ws-item-num">2.</span><input type="text" /></div>
+      <div class="ws-item"><span class="ws-item-num">3.</span><input type="text" /></div>
+      <div class="ws-item"><span class="ws-item-num">4.</span><input type="text" /></div>
+    </div>
+  </div>
+
+  <!-- Preventing and Dealing with Problems -->
+  <div class="ws-section">
+    <div class="ws-section-title">Preventing Problems — My Self-Care</div>
+    <div class="ws-section-desc">Self-care activities are the things I do regularly to maintain my mental health. Examples include eating well, exercising, socialising, and engaging in hobbies.</div>
+    <div class="ws-section-examples">Tip: A healthy lifestyle makes me more resilient to stress. Choose self-care activities that can become habits and a regular part of my day. List 3 self-care activities I can practise regularly.</div>
+    <div class="ws-items">
+      <div class="ws-item"><span class="ws-item-num">1.</span><input type="text" /></div>
+      <div class="ws-item"><span class="ws-item-num">2.</span><input type="text" /></div>
+      <div class="ws-item"><span class="ws-item-num">3.</span><input type="text" /></div>
+    </div>
+  </div>
+
+  <div class="ws-section">
+    <div class="ws-section-title">My Coping Strategies</div>
+    <div class="ws-section-desc">Coping strategies are skills I use to manage problems or symptoms when they arise. Examples include relaxation, communication, and anger management skills.</div>
+    <div class="ws-section-examples">Tip: Practise coping strategies regularly so I'm prepared to use them in an emergency. List 3 coping strategies I can use.</div>
+    <div class="ws-items">
+      <div class="ws-item"><span class="ws-item-num">1.</span><input type="text" /></div>
+      <div class="ws-item"><span class="ws-item-num">2.</span><input type="text" /></div>
+      <div class="ws-item"><span class="ws-item-num">3.</span><input type="text" /></div>
+    </div>
+  </div>
+
+  <!-- Returning to Therapy -->
+  <div class="ws-section">
+    <div class="ws-section-title">Returning to Therapy</div>
+    <div class="ws-section-desc">It's normal to experience problems or uncomfortable emotions like sadness, anger, or anxiety. But when problems become too intense or last too long, I may need professional help. How will I know if I should return to therapy?</div>
+    <textarea class="ws-textarea" placeholder="e.g., If my warning signs return for more than two weeks, if I'm not sleeping, if I stop using my coping strategies, if people close to me say they're worried…"></textarea>
+  </div>
+
+  <!-- Support Contacts -->
+  <div class="ws-section">
+    <div class="ws-section-title">My Support Contacts</div>
+    <div class="ws-section-desc">People and services I can reach out to if I notice my warning signs returning.</div>
+    <div class="ws-section-examples">Lifeline — 13 11 14 · Suicide Call Back Service — 1300 659 467 · Beyond Blue — 1300 22 4636 · Emergency — 000</div>
+    <div class="ws-items">
+      <div class="ws-item"><span class="ws-item-num">GP:</span><input type="text" /></div>
+      <div class="ws-item"><span class="ws-item-num">Psychologist:</span><input type="text" /></div>
+      <div class="ws-item"><span class="ws-item-num">Trusted person:</span><input type="text" /></div>
+      <div class="ws-item"><span class="ws-item-num">Crisis line:</span><input type="text" /></div>
+    </div>
+  </div>
+
+  <button class="ws-print-btn" onclick="window.print()">Print worksheet</button>
+
+</div>

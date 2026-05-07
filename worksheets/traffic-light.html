@@ -1,0 +1,199 @@
+<!-- ═══════════════════════════════════════════════════════
+     PAGE: Traffic Light Signals
+     Section: Worksheets & Resources
+
+     A relapse-prevention tool used during termination —
+     mapping signals (what I notice / what others notice)
+     and actions (what helps) across three states:
+     I feel good · I am starting to feel less well ·
+     I am not well.
+     ═══════════════════════════════════════════════════════ -->
+
+<style>
+  .ws-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; margin: 16px 0 0; }
+  .ws-field { display: flex; flex-direction: column; gap: 4px; }
+  .ws-field label { font-size: 11px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); }
+  .ws-field input {
+    border: none; border-bottom: 1.5px solid var(--border); background: transparent;
+    color: var(--ink); font-family: 'DM Sans', sans-serif; font-size: 14px;
+    padding: 6px 2px; outline: none; transition: border-color 0.2s; width: 100%;
+  }
+  .ws-field input:focus { border-bottom-color: var(--accent); }
+
+  .ws-section { background: var(--surface); border: 1.5px solid var(--border); border-radius: 16px; padding: 22px 24px; margin-bottom: 14px; }
+  .ws-section-title { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
+  .ws-section-desc { font-size: 13px; color: var(--muted); line-height: 1.55; margin-bottom: 4px; }
+  .ws-section-examples { font-size: 12px; color: var(--muted); font-style: italic; margin-bottom: 16px; line-height: 1.5; }
+
+  /* Header strip explaining the two columns */
+  .tl-legend {
+    display: grid; grid-template-columns: 140px 1fr 1fr; gap: 14px;
+    margin-bottom: 14px;
+  }
+  .tl-legend-spacer { }
+  .tl-legend-cell {
+    background: #f6dcd1; color: var(--ink);
+    border-radius: 12px; padding: 14px 18px;
+    font-family: 'Playfair Display', serif;
+  }
+  .tl-legend-cell .tl-legend-title { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+  .tl-legend-cell .tl-legend-prompt { font-family: 'DM Sans', sans-serif; font-size: 12px; color: var(--ink); opacity: 0.75; line-height: 1.45; }
+
+  /* Each row of the traffic light grid */
+  .tl-row {
+    display: grid; grid-template-columns: 140px 1fr 1fr; gap: 14px;
+    margin-bottom: 14px; align-items: stretch;
+  }
+  .tl-light {
+    border-radius: 14px; padding: 18px 14px; color: #1a1a1a;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; font-family: 'DM Sans', sans-serif;
+    font-weight: 600; font-size: 14px; line-height: 1.35;
+    min-height: 160px;
+  }
+  .tl-light .tl-dot {
+    width: 56px; height: 56px; border-radius: 50%; margin-bottom: 10px;
+    border: 3px solid rgba(0,0,0,0.08);
+  }
+  .tl-green  { background: #d8efd5; }
+  .tl-green  .tl-dot { background: #4ca85a; }
+  .tl-yellow { background: #fcf2c8; }
+  .tl-yellow .tl-dot { background: #f3cb3c; }
+  .tl-red    { background: #f9d4d2; }
+  .tl-red    .tl-dot { background: #ec7068; }
+
+  .tl-cell {
+    border-radius: 14px; padding: 16px 18px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .tl-cell.green  { background: #ecf7ea; }
+  .tl-cell.yellow { background: #fdf8de; }
+  .tl-cell.red    { background: #fce6e4; }
+  .tl-cell-label {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px; font-weight: 700; color: var(--ink);
+    margin-bottom: 2px;
+  }
+  .tl-cell textarea {
+    flex: 1;
+    width: 100%; box-sizing: border-box;
+    border: 1.5px solid rgba(0,0,0,0.1);
+    background: rgba(255,255,255,0.55);
+    border-radius: 10px;
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif; font-size: 13px;
+    padding: 10px 12px; outline: none; resize: vertical;
+    min-height: 110px; line-height: 1.5;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .tl-cell textarea:focus { border-color: var(--accent); background: #fff; }
+  .tl-cell textarea::placeholder { color: var(--muted); opacity: 0.7; }
+
+  .ws-print-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--ink); color: var(--bg); border: none; border-radius: 8px;
+    padding: 9px 18px; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500;
+    cursor: pointer; transition: opacity 0.15s; margin-top: 4px;
+  }
+  .ws-print-btn:hover { opacity: 0.8; }
+
+  @media (max-width: 720px) {
+    .tl-legend, .tl-row { grid-template-columns: 1fr; }
+    .tl-light { min-height: 100px; flex-direction: row; gap: 14px; justify-content: flex-start; }
+    .tl-light .tl-dot { margin-bottom: 0; width: 40px; height: 40px; }
+  }
+
+  @media print {
+    .ws-print-btn { display: none; }
+    .tl-cell textarea { border-color: #999; background: #fff; }
+  }
+</style>
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div class="page-label">Client Worksheets</div>
+    <h1 class="page-title">Traffic Light <em>Signals</em></h1>
+    <p class="page-desc">A relapse-prevention tool for the ending phase of therapy — mapping the signals that tell the client where they are (green, yellow, red) and the actions that help in each zone. Useful as a portable summary the client can keep using after termination.</p>
+  </div>
+</div>
+
+<div class="page-body">
+
+  <div class="info-card">
+    <div class="info-card-title">My Traffic Light Plan</div>
+    <p><em>To be completed together with a clinician — usually during the termination phase.</em></p>
+    <p>Use this worksheet to map out three zones — when I feel good, when I'm starting to feel less well, and when I'm not well. For each zone, note the <strong>signals</strong> (what I notice in myself, and what others might notice in me) and the <strong>actions</strong> (what I can do, and which strategies are most helpful).</p>
+    <div class="ws-fields">
+      <div class="ws-field"><label>Name</label><input type="text" placeholder="Client name" /></div>
+      <div class="ws-field"><label>Date</label><input type="text" placeholder="DD / MM / YYYY" /></div>
+    </div>
+  </div>
+
+  <div class="ws-section">
+
+    <!-- Column legend -->
+    <div class="tl-legend">
+      <div class="tl-legend-spacer"></div>
+      <div class="tl-legend-cell">
+        <div class="tl-legend-title">Signals</div>
+        <div class="tl-legend-prompt">What do I notice about myself? What do others notice about me?</div>
+      </div>
+      <div class="tl-legend-cell">
+        <div class="tl-legend-title">Actions</div>
+        <div class="tl-legend-prompt">What can I do? Which strategies are helpful?</div>
+      </div>
+    </div>
+
+    <!-- GREEN -->
+    <div class="tl-row">
+      <div class="tl-light tl-green">
+        <div class="tl-dot"></div>
+        I feel good
+      </div>
+      <div class="tl-cell green">
+        <div class="tl-cell-label">Signals</div>
+        <textarea placeholder="e.g., sleeping well, engaged with friends, motivated at work, eating regular meals, using my coping skills, feeling like myself…"></textarea>
+      </div>
+      <div class="tl-cell green">
+        <div class="tl-cell-label">Actions</div>
+        <textarea placeholder="e.g., keep up routines, exercise, social plans, hobbies, regular check-ins with self, gratitude practice, healthy sleep…"></textarea>
+      </div>
+    </div>
+
+    <!-- YELLOW -->
+    <div class="tl-row">
+      <div class="tl-light tl-yellow">
+        <div class="tl-dot"></div>
+        I am starting to feel less well
+      </div>
+      <div class="tl-cell yellow">
+        <div class="tl-cell-label">Signals</div>
+        <textarea placeholder="e.g., low motivation, sleep slipping, withdrawing from friends, more irritable, unhelpful thoughts returning, skipping meals or exercise…"></textarea>
+      </div>
+      <div class="tl-cell yellow">
+        <div class="tl-cell-label">Actions</div>
+        <textarea placeholder="e.g., reach out to a trusted person, return to my coping skills, schedule one positive activity, review my maintenance plan, contact GP / psychologist…"></textarea>
+      </div>
+    </div>
+
+    <!-- RED -->
+    <div class="tl-row">
+      <div class="tl-light tl-red">
+        <div class="tl-dot"></div>
+        I am not well
+      </div>
+      <div class="tl-cell red">
+        <div class="tl-cell-label">Signals</div>
+        <textarea placeholder="e.g., not sleeping or eating, isolated, unable to function at work or home, hopeless thoughts, thoughts of self-harm, can't get out of bed…"></textarea>
+      </div>
+      <div class="tl-cell red">
+        <div class="tl-cell-label">Actions</div>
+        <textarea placeholder="e.g., follow safety plan, contact GP / psychologist urgently, call Lifeline (13 11 14), reach out to support person, go to nearest hospital, call 000 if in immediate danger…"></textarea>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="ws-print-btn" onclick="window.print()">Print worksheet</button>
+
+</div>

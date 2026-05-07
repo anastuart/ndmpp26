@@ -24,6 +24,7 @@ const NAV = [
       { id: 'motivational-interviewing', title: 'Motivational Interviewing', path: 'stems/motivational-interviewing.html' },
       { id: 'interpersonal-psychotherapy', title: 'Interpersonal Psychotherapy', path: 'stems/interpersonal_psychotherapy.html' },
       { id: 'psychoeducation-stems', title: 'Psychoeducation Stems', path: 'stems/psychoeducation-stems.html' },
+      { id: 'termination',           title: 'Termination',            path: 'stems/termination.html' },
     ]
   },
   {
@@ -38,6 +39,8 @@ const NAV = [
     pages: [
       { id: 'safety-plan',          title: 'Safety Plan',                path: 'worksheets/safety-plan.html' },
       { id: 'smart-goals',          title: 'SMART Goals',                path: 'worksheets/smart-goals.html' },
+      { id: 'maintenance-plan',     title: 'Maintenance Plan',           path: 'worksheets/maintenance-plan.html' },
+      { id: 'traffic-light',        title: 'Traffic Light Signals',      path: 'worksheets/traffic-light.html' },
       // { id: 'unhelpful-thinking', title: 'Unhelpful Thinking Styles', path: 'worksheets/unhelpful-thinking.html' },
       // { id: 'mi-change-plan',     title: 'MI Change Planning',        path: 'worksheets/mi-change-plan.html' },
     ]
