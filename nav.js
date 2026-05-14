@@ -22,6 +22,7 @@ const NAV = [
       { id: 'five-ps',               title: 'The 5 Ps',              path: 'stems/five-ps.html' },
       { id: 'formulation-discussion', title: 'Presenting a Formulation', path: 'stems/formulation-discussion.html' },
       { id: 'motivational-interviewing', title: 'Motivational Interviewing', path: 'stems/motivational-interviewing.html' },
+      { id: 'solution-focused-therapy', title: 'Solution Focused Therapy', path: 'stems/solution-focused-therapy.html' },
       { id: 'interpersonal-psychotherapy', title: 'Interpersonal Psychotherapy', path: 'stems/interpersonal_psychotherapy.html' },
       { id: 'psychoeducation-stems', title: 'Psychoeducation Stems', path: 'stems/psychoeducation-stems.html' },
       { id: 'termination',           title: 'Termination',            path: 'stems/termination.html' },
